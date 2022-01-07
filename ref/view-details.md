@@ -1,6 +1,18 @@
 # View Details
 
-<!-- ---------------------------- accounts ---------------------------- -->
+<!-- ---------------------------- base ---------------------------- -->
+url-prefix : ""
+
+signup(request)
+    creates new user
+url : "signup/"
+
+logout_request(request)
+    returns the view to logout
+url : "logout/"
+url-name : logout
+
+<!-- ---------------------------- profile ---------------------------- -->
 
 url-prefix : "profile/"
 

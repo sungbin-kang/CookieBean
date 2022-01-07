@@ -27,8 +27,11 @@ If you are an admin, you are able to add and edit product and ingredient informa
 
 # Apps and Database Models
 
-<!-- ---------------------------- accounts ---------------------------- -->
-### accounts
+<!-- ---------------------------- base ---------------------------- -->
+### base
+
+<!-- ---------------------------- profile ---------------------------- -->
+### profile
 
   
 **`Profile`** : This model represents a profile of user's account

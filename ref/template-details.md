@@ -5,7 +5,10 @@
 - base
     - base.html
     - home.html
-- accounts
+    - registration
+        - login.html
+        - signup.html
+- profile
     - my_profile.html
     - my_orders.html
 - shoppingcart
@@ -51,27 +54,27 @@
     - image
 
 
-**`accounts.html`** : a base template for account related pages
+**`profile.html`** : a base template for account related pages
 - extends 'base.html'
-- accounts-navbar
+- profile-navbar
     - my_profile
     - my_orders
     - my_cart
 - content
 
 **`my_profile.html`** : a view of the user's profile information
-- extends 'accounts.html'
+- extends 'profile.html'
 - my_profile
     - username
     - edit my information
 
 **`my_orders.html`** : a view of the list of user's orders
-- extends 'accounts.html'
+- extends 'profile.html'
 - my_orders
 
 
 **`my_cart.html`** : a view the list of products in the cart
-- extends 'accounts.html'
+- extends 'profile.html'
 
 
 **`shop_cookies.html`** : a view list of cookie products to be shopped

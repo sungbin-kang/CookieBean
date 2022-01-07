@@ -30,7 +30,7 @@ If you are an admin, you are able to add and edit product and ingredient informa
 <!-- ---------------------------- accounts ---------------------------- -->
 ## accounts
 
-### `Profile`
+`Profile`
 This model represents a profile of user's account
 Attributes:
 - **`user`** : the user of this shopping cart - OneToOneField(User)
@@ -45,7 +45,7 @@ Methods:
 
 shopping cart example: https://pypi.org/project/django-shopping-cart/0.1/
 
-### `Cart`
+`Cart`
 This model represents a shopping cart
 Attributes:
 - **`profile`** : the associated profile of this shopping cart - OneToOneField(Profile)
@@ -54,7 +54,7 @@ Attributes:
 Methods:
 - **`get_items()`** : returns queryset of Products that are in this cart
 
-### `Entry`
+`Entry`
 This model represents an entry of products in shopping cart
 Attributes:
 - **`cart`** : the shopping cart of this entry - OneToOneField(Cart)
@@ -63,7 +63,7 @@ Attributes:
 - **`count`** : the quantity of the product of this entry 
 Methods:
 
-### `Order`
+`Order`
 This model represents an order of a customer
 Attributes:
 - **`order_id`** : an order unber generated uniquely for each order - AutoField(primary_key=True)
@@ -79,7 +79,7 @@ Methods:
 <!-- ---------------------------- product ---------------------------- -->
 ## product
 
-### `Product`
+`Product`
 This model represents a product of the company
 Attributes:
 - **`name`** : the name of this item
@@ -89,12 +89,12 @@ Methods:
 
 <!--  Cookie(Product)  -->
 
-### `Cookie`(`Product`)
+`Cookie`(`Product`)
 Inherits from `Product` model
 This model represents a cookie type of a product
 Attributes:
 
-<!-- ### `Ingredient`
+<!-- `Ingredient`
 This model represents an ingredient that the company has in its inventory
 Attributes:
 - **`name`** : the name of the ingredient (i.e. `flour`)
@@ -102,7 +102,7 @@ Attributes:
     AutoField(primary_key=True)
 - **`price_per_ounce`** : the price per unit of the ingredient
 
-### `RecipeRequirement`
+`RecipeRequirement`
 This model represents a single ingredient and how much of it is required for an item
 Attributes:
 - **`item`** : 
@@ -114,7 +114,7 @@ Attributes:
 <!-- ---------------------------- inventory ---------------------------- -->
 ## inventory
 
-### `Inventory`
+`Inventory`
 This model represents a stock management system for company product
 Attributes:
 - **`product`** : the product of this inventory management system - OneToOneField(Product)
@@ -125,7 +125,7 @@ Methods:
 - **`is_in_stock(): boolean`** : returns true if in stock; otherwise, false
 
 
-<!-- ### `IngredientInventory`(`Inventory`)
+<!-- `IngredientInventory`(`Inventory`)
 This model represents a stock management system for cookie ingredient 
 Attributes:
 - **`ingredeint`** : the ingredient to manage stock
@@ -157,8 +157,8 @@ Methods:
 
 
 
-### `base.html`
+`base.html`
 a base template for all the other pages to inherit from, with common styling and a navbar linking to the other pages
 
-### `home.html`
+`home.html`
 home page of the website

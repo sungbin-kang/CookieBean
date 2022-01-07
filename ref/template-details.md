@@ -16,7 +16,7 @@
 - product
     - shop_cookies.html
     - cookie_detail.html
-- admin
+- cookiebean_admin
     - cookie_inventory.html
     - report.html
     - report_detail.html
@@ -39,7 +39,7 @@
         - navbar
             - about_us
             - shop_cookies
-            - admin
+            - cookiebean_admin
                 - report
                 - order
                 - inventory
@@ -84,7 +84,7 @@ extends 'base.html'
 **`cookie_detail.html`** : a view of detail of a cookie
 
 
-**`cookie_inventory.html`** : a view of admin to edit cookie stock inventory
+**`cookie_inventory.html`** : a view of cookiebean_admin to edit cookie stock inventory
 
 
 **`report.html`** : a view of reports with revenue and profit

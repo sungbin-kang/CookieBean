@@ -12,7 +12,7 @@ logout_request(request)
 url : "logout/"
 url-name : logout
 
-<!-- ---------------------------- profile ---------------------------- -->
+<!-- ---------------------------- account ---------------------------- -->
 
 url-prefix : "profile/"
 
@@ -78,9 +78,9 @@ url : "add-to-cart/<product_id>"
 url-name : add_to_cart
 
 
-<!-- ---------------------------- admin ---------------------------- -->
+<!-- ---------------------------- cookiebean_admin ---------------------------- -->
 
-url-prefix : "admin/"
+url-prefix : "cookiebean_admin/"
 
 <!-- product_inventory_list(request)
     return the list of inventory for company products

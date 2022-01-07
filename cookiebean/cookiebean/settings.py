@@ -32,12 +32,21 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+
+    # django apps
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    
+    # cookiebean apps
+    'account.apps.AccountConfig',
+    'cookiebean_admin.apps.CookiebeanAdminConfig',
+    'base.apps.BaseConfig',
+    'products.apps.ProductsConfig',
+    'shoppingcart.apps.ShoppingcartConfig',
 ]
 
 MIDDLEWARE = [

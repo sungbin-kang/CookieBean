@@ -30,8 +30,8 @@ If you are an admin, you are able to add and edit product and ingredient informa
 <!-- ---------------------------- base ---------------------------- -->
 ### base
 
-<!-- ---------------------------- profile ---------------------------- -->
-### profile
+<!-- ---------------------------- account ---------------------------- -->
+### account
 
   
 **`Profile`** : This model represents a profile of user's account
@@ -111,7 +111,7 @@ Attributes:
     OneToOneField
 - `quantity_in_gram` : -->
   
-<!-- ---------------------------- inventory ---------------------------- -->
+<!-- ---------------------------- cookiebean_admin ---------------------------- -->
 ### inventory
 
   

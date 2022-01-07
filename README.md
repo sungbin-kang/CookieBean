@@ -31,8 +31,7 @@ If you are an admin, you are able to add and edit product and ingredient informa
 ## accounts
 
 
-**`Profile`**
-- This model represents a profile of user's account
+**`Profile`** : This model represents a profile of user's account
 - Attributes:
     - `user` : the user of this shopping cart - OneToOneField(User)
 - Methods:
@@ -45,73 +44,53 @@ If you are an admin, you are able to add and edit product and ingredient informa
 ## shoppingcart
 
 
-**`Cart`**
-
-This model represents a shopping cart
-
-Attributes:
-- `profile` : the associated profile of this shopping cart - OneToOneField(Profile)
-- `count` : the total number of the products in the cart
-- `total` : the total cost of the products in the cart(including sales tax)
-
-Methods:
-- `get_items()` : returns queryset of Products that are in this cart
+**`Cart`** : This model represents a shopping cart
+- Attributes:
+    - `profile` : the associated profile of this shopping cart - OneToOneField(Profile)
+    - `count` : the total number of the products in the cart
+    - `total` : the total cost of the products in the cart(including sales tax)
+- Methods:
+    - `get_items()` : returns queryset of Products that are in this cart
 
 
-**`Entry`**
-
-This model represents an entry of products in shopping cart
-
-Attributes:
-- `cart` : the shopping cart of this entry - OneToOneField(Cart)
-- `order` : the order of this entry - ForeingKey(Order)
-- `product` : the product of this entry in the shopping cart - ForeignKey(Product)
-- `count` : the quantity of the product of this entry 
-
-Methods:
+**`Entry`** : This model represents an entry of products in shopping cart
+- Attributes:
+    - `cart` : the shopping cart of this entry - OneToOneField(Cart)
+    - `order` : the order of this entry - ForeingKey(Order)
+    - `product` : the product of this entry in the shopping cart - ForeignKey(Product)
+    - `count` : the quantity of the product of this entry 
+- Methods:
 
 
-**`Order`**
-
-This model represents an order of a customer
-
-Attributes:
-- `order_id` : an order unber generated uniquely for each order - AutoField(primary_key=True)
-- `owner_profile` : this order owner's profile - ForeignKey(Profile)
-- `total_count` : the total count of products in this order
-- `total_price` : the total price of this order
-- `timestamp` : the timestamp of when this order was made
-<!-- - `ready-to-ship` :  -->
-<!-- - `shipped` :  -->
-
-Methods:
+**`Order`** : This model represents an order of a customer
+- Attributes:
+    - `order_id` : an order unber generated uniquely for each order - AutoField(primary_key=True)
+    - `owner_profile` : this order owner's profile - ForeignKey(Profile)
+    - `total_count` : the total count of products in this order
+    - `total_price` : the total price of this order
+    - `timestamp` : the timestamp of when this order was made
+    <!-- - `ready-to-ship` :  -->
+    <!-- - `shipped` :  -->
+- Methods:
 
 
 <!-- ---------------------------- product ---------------------------- -->
 ## product
 
 
-**`Product`**
-
-This model represents a product of the company
-
-Attributes:
-- `name` : the name of this item
-- `product_id` : the unique id of this item - AutoField(primary_key=True)
-- `price` : the price of this product
-
-Methods:
+**`Product`** : This model represents a product of the company
+- Attributes:
+    - `name` : the name of this item
+    - `product_id` : the unique id of this item - AutoField(primary_key=True)
+    - `price` : the price of this product
+- Methods:
 
 
 
 <!--  Cookie(Product)  -->
 
-**`Cookie`(`Product`)**
-
-Inherits from `Product` model
-This model represents a cookie type of a product
-
-Attributes:
+**`Cookie`(`Product`)** : Inherits from `Product` model. This model represents a cookie type of a product
+- Attributes:
 
 <!-- `Ingredient`
 This model represents an ingredient that the company has in its inventory
@@ -134,18 +113,14 @@ Attributes:
 ## inventory
 
 
-**`Inventory`**
-
-This model represents a stock management system for company product
-
-Attributes:
-- `product` : the product of this inventory management system - OneToOneField(Product)
-- `quantity` : the quantity in the inventory
-- `low` : the quantity that indicates the inventory stock is in low
-
-Methods:
-- `is_low(): boolean` : returns true if stock quantity goes below a set amount; otherwise, false
-- `is_in_stock(): boolean` : returns true if in stock; otherwise, false
+**`Inventory`** : This model represents a stock management system for company product
+- Attributes:
+    - `product` : the product of this inventory management system - OneToOneField(Product)
+    - `quantity` : the quantity in the inventory
+    - `low` : the quantity that indicates the inventory stock is in low
+- Methods:
+    - `is_low(): boolean` : returns true if stock quantity goes below a set amount; otherwise, false
+    - `is_in_stock(): boolean` : returns true if in stock; otherwise, false
 
 
 <!-- `IngredientInventory`(`Inventory`)

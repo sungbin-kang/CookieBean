@@ -32,16 +32,13 @@ If you are an admin, you are able to add and edit product and ingredient informa
 
 
 **`Profile`**
-
-This model represents a profile of user's account
-
-Attributes:
-- `user` : the user of this shopping cart - OneToOneField(User)
-
-Methods:
-- `get_username()` : returns user's username
-- `get_userid()` : returns user's unique id 
-- `is_staff()` : true if user is a staff; otherwise, false
+- This model represents a profile of user's account
+- Attributes:
+    - `user` : the user of this shopping cart - OneToOneField(User)
+- Methods:
+    - `get_username()` : returns user's username
+    - `get_userid()` : returns user's unique id 
+    - `is_staff()` : true if user is a staff; otherwise, false
 
 
 <!-- --------------------------- shoppingcart --------------------------- -->

@@ -28,9 +28,9 @@ If you are an admin, you are able to add and edit product and ingredient informa
 # Apps and Database Models
 
 <!-- ---------------------------- accounts ---------------------------- -->
-## accounts
+### accounts
 
-
+  
 **`Profile`** : This model represents a profile of user's account
 - Attributes:
     - `user` : the user of this shopping cart - OneToOneField(User)
@@ -38,12 +38,12 @@ If you are an admin, you are able to add and edit product and ingredient informa
     - `get_username()` : returns user's username
     - `get_userid()` : returns user's unique id 
     - `is_staff()` : true if user is a staff; otherwise, false
-
+  
 
 <!-- --------------------------- shoppingcart --------------------------- -->
-## shoppingcart
+### shoppingcart
 
-
+  
 **`Cart`** : This model represents a shopping cart
 - Attributes:
     - `profile` : the associated profile of this shopping cart - OneToOneField(Profile)
@@ -52,7 +52,7 @@ If you are an admin, you are able to add and edit product and ingredient informa
 - Methods:
     - `get_items()` : returns queryset of Products that are in this cart
 
-
+  
 **`Entry`** : This model represents an entry of products in shopping cart
 - Attributes:
     - `cart` : the shopping cart of this entry - OneToOneField(Cart)
@@ -61,7 +61,7 @@ If you are an admin, you are able to add and edit product and ingredient informa
     - `count` : the quantity of the product of this entry 
 - Methods:
 
-
+  
 **`Order`** : This model represents an order of a customer
 - Attributes:
     - `order_id` : an order unber generated uniquely for each order - AutoField(primary_key=True)
@@ -73,10 +73,10 @@ If you are an admin, you are able to add and edit product and ingredient informa
     <!-- - `shipped` :  -->
 - Methods:
 
-
+  
 <!-- ---------------------------- product ---------------------------- -->
-## product
-
+### product
+  
 
 **`Product`** : This model represents a product of the company
 - Attributes:
@@ -85,11 +85,10 @@ If you are an admin, you are able to add and edit product and ingredient informa
     - `price` : the price of this product
 - Methods:
 
-
-
+  
 <!--  Cookie(Product)  -->
 
-**`Cookie`(`Product`)** : Inherits from `Product` model. This model represents a cookie type of a product
+**`Cookie`(`Product`)** : This model represents a cookie type of a product
 - Attributes:
 
 <!-- `Ingredient`
@@ -108,12 +107,12 @@ Attributes:
 - `ingredient` : 
     OneToOneField
 - `quantity_in_gram` : -->
-
+  
 <!-- ---------------------------- inventory ---------------------------- -->
-## inventory
+### inventory
 
-
-**`Inventory`** : This model represents a stock management system for company product
+  
+**`Inventory`** : This model represents a inventory of product
 - Attributes:
     - `product` : the product of this inventory management system - OneToOneField(Product)
     - `quantity` : the quantity in the inventory
@@ -131,7 +130,7 @@ Attributes:
 Methods:
 - `enough(): -> boolean` : returns true if there are enough amount left in the inventory -->
 
-
+  
 # Views and Templates Overview
 
 - base.html

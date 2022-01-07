@@ -161,15 +161,3 @@ delete_recipe(request):
     deletes recipe object 
 url : "delete-recipe/<recipe_id>"
 url-name : delete_recipe -->
-
-
-
-
-
-
-
-
-
-
-url: ""
-url-name : 

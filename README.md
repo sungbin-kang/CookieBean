@@ -134,15 +134,8 @@ Methods:
 - **`enough(): -> boolean`** : returns true if there are enough amount left in the inventory -->
 
 
-
-
-### ``
-- **``** : 
-
-
 # Views and Templates Overview
 
-Customer View 
 - base.html
     - home.html
         - login.html
@@ -169,7 +162,3 @@ a base template for all the other pages to inherit from, with common styling and
 
 ### `home.html`
 home page of the website
-
-
-### ``
-### ``

@@ -3,14 +3,20 @@
 <!-- ---------------------------- base ---------------------------- -->
 url-prefix : ""
 
+home(request)
+    directs to home.html
+url : ""
+url-name : home
+
 signup(request)
     creates new user
-url : "signup/"
+url : "account/signup/"
 
 logout_request(request)
     returns the view to logout
-url : "logout/"
+url : "account/logout/"
 url-name : logout
+
 
 <!-- ---------------------------- account ---------------------------- -->
 
